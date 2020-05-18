@@ -1,0 +1,133 @@
+@import './colors.scss';
+
+table.editable {
+
+  border-collapse: collapse;
+
+  tr {  
+    &:nth-child(2n) {
+      background-color: $lightgray_5;
+    }
+  }
+
+  col {
+    &:hover {
+      text-transform: capitalize;
+    }
+  }
+
+  td {
+    border: 1px solid $lightgray_20;
+    min-width: 100px;
+    height: 32px;
+    position: relative;
+    transition: 0.5s all;
+
+    .cell-value {
+      display: inline-block;
+      width: 100%;
+      padding: 8px 14px;
+      line-height: 21px;
+
+      &:focus {
+        box-shadow: 0 0 0px 2px #3255f1;
+        outline: 0;
+      }
+
+      &:empty::before {
+        content: "\feff";
+      }
+    }
+
+    .cell-focused {
+      box-shadow: 0px 0 2px 2px #6981f3;
+      z-index: 1000;
+      position: relative;
+    }
+
+    .align {
+      &-center {
+        text-align: center;
+      }
+
+      &-right {
+        text-align: right;
+      }
+    }
+
+    &.table-head {
+      text-align: center;
+      font-weight: 700;
+    }
+
+    &.extra {
+      border-style: dashed;
+      border-color: white;
+      min-width: 32px;
+      background-color: white;
+      transition: 0.3s all;
+    }
+
+    &.delete-cell {
+      border: none;
+      background-color: white;
+      min-width: 28px;
+      text-align: center;
+
+      .delete-icon {
+        cursor: pointer;
+        color: $lightgray_30;
+      }
+    }
+
+    .insert-row {
+      position: absolute;
+      top: -10px;
+      transform: translateX(-50%);
+      left: 50%;
+    }
+
+    .insert-column {
+      position: absolute;
+      left: -8px;
+      transform: translateY(-40%);
+      top: 50%;
+    }
+
+    .insert-icon {
+      fill: $lightgray_50;
+      background-color: white;
+      border-radius: 50%;
+      border: 1px solid $lightgray_20;
+      cursor: pointer;
+    }
+  }
+
+  &:hover {
+    td, th {
+      &.extra {
+        border-color: $lightgray_20;
+        opacity: 0.5;
+        transition: 0.5s all;
+      }
+    }
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(27,31,35,0.05);
+    border-radius: 3px;
+  }
+} /* --table.editable */
+
+.md-table {
+  padding: 12px;
+  white-space: pre;
+  text-align: left;
+
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 14px;
+}

@@ -1,0 +1,22 @@
+yarn add v1.7.0
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+success Saved lockfile.
+success Saved 11 new dependencies.
+info Direct dependencies
+└─ styled-components@5.1.0
+info All dependencies
+├─ @emotion/is-prop-valid@0.8.8
+├─ @emotion/memoize@0.7.4
+├─ @emotion/stylis@0.8.5
+├─ @emotion/unitless@0.7.5
+├─ babel-plugin-styled-components@1.10.7
+├─ babel-plugin-syntax-jsx@6.18.0
+├─ camelize@1.0.0
+├─ css-color-keywords@1.0.0
+├─ css-to-react-native@3.0.0
+├─ shallowequal@1.1.0
+└─ styled-components@5.1.0
+Done in 17.38s.

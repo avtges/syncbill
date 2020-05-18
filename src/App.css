@@ -1,0 +1,22 @@
+
+.jumbotron {
+  background-image: linear-gradient(135deg, #fff 0%, #c3cfe2 100%);
+  margin-bottom: 0rem;
+  height: 100%;
+  margin: 0px;
+}
+
+.logo {
+  font-family: 'Comfortaa', cursive;
+  color: #484848;
+}
+
+.btn-light {
+  border: 1px solid #ddd;
+}
+
+@media (min-width: 576px) {
+  .jumbotron {
+    padding: 2.5rem 2rem;
+  }
+}
